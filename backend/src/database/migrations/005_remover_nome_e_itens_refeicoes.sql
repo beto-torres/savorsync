@@ -1,0 +1,3 @@
+ALTER TABLE refeicoes
+  DROP COLUMN IF EXISTS nome,
+  DROP COLUMN IF EXISTS itens;
