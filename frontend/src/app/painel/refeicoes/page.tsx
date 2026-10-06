@@ -17,6 +17,7 @@ import {
   X,
 } from "lucide-react";
 import { AlternadorTema } from "@/components/AlternadorTema";
+import { AcessoQrCode } from "@/components/AcessoQrCode";
 import { ImagemRefeicao } from "@/components/ImagemRefeicao";
 import { solicitarApi } from "@/lib/api";
 import {
@@ -313,6 +314,7 @@ export default function PaginaGestaoRefeicoes() {
               <LogOut size={18} aria-hidden="true" />
               Sair
             </button>
+            <AcessoQrCode compacto />
             <AlternadorTema />
           </div>
         </div>

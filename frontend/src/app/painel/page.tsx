@@ -21,6 +21,7 @@ import {
   Utensils,
 } from "lucide-react";
 import { AlternadorTema } from "@/components/AlternadorTema";
+import { AcessoQrCode } from "@/components/AcessoQrCode";
 import { ImagemRefeicao } from "@/components/ImagemRefeicao";
 
 type Periodo = "manha" | "almoco" | "tarde";
@@ -193,6 +194,7 @@ export default function PaginaPainel() {
               <LogOut size={18} aria-hidden="true" />
               Sair
             </button>
+            <AcessoQrCode compacto />
             <AlternadorTema />
           </div>
         </div>
@@ -311,7 +313,7 @@ export default function PaginaPainel() {
               className="inline-flex items-center justify-center gap-2 bg-primaria px-4 py-3 text-sm font-bold text-primaria-texto hover:bg-primaria-hover"
             >
               <Star size={18} aria-hidden="true" />
-              Gerenciar avaliações
+              Avaliações
             </Link>
           </section>
         )}

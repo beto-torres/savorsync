@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { CalendarDays, Check, Code2, HeartHandshake, Lightbulb, LogIn, Sparkles, Users } from "lucide-react";
+import { AcessoQrCode } from "@/components/AcessoQrCode";
 import { AlternadorTema } from "@/components/AlternadorTema";
 import { useAutenticacaoUsuario } from "@/lib/autenticacao";
 
@@ -68,6 +69,7 @@ export default function PaginaEquipe() {
               <span className="sm:hidden">Próximo</span>
             </button>
             <Link href="/equipe" className="inline-flex items-center justify-center gap-2 border border-borda bg-superficie px-1 py-2 text-xs font-bold text-texto-principal transition hover:cursor-pointer hover:bg-borda/30 sm:px-3 sm:text-sm"><Users size={17} aria-hidden="true" /><span className="hidden sm:inline">Nossa equipe</span><span className="sm:hidden">Equipe</span></Link>
+            <AcessoQrCode />
             <button
               type="button"
               onClick={() => {
@@ -128,7 +130,15 @@ export default function PaginaEquipe() {
       </section>
 
       <section className="mx-auto w-full px-5 py-10 sm:px-8 sm:py-14 lg:max-w-7xl" aria-labelledby="integrantes-title">
-        <div className="mb-7 flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-bold tracking-[0.16em] text-secundaria">DESENVOLVEDORES</p><h2 id="integrantes-title" className="mt-2 text-2xl font-semibold">Conheça a equipe</h2></div><p className="font-bold text-lg text-blue-400">ETE - Turma 3DSB</p></div>
+        <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p className="text-xs font-bold tracking-[0.16em] text-secundaria">DESENVOLVEDORES</p>
+            <h2 id="integrantes-title" className="mt-2 text-2xl font-semibold">Conheça a equipe</h2>
+          </div>
+          <p className="w-full border-l-4 border-primaria bg-superficie px-4 py-3 text-lg font-bold text-texto-principal shadow-sm sm:w-auto sm:text-xl">
+            ETE - Turma 3DSB
+          </p>
+        </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {integrantes.map((integrante, indice) => (
             <article key={integrante.nome} className="group overflow-hidden border border-borda bg-superficie transition hover:-translate-y-1 hover:border-borda-forte hover:shadow-xl hover:shadow-black/10">

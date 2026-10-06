@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict WCRQh2tT6etUeuzcTS7oqVKEbzPrkaKohLIscsXEVHECl1WjVU5vZzBGpMZb05z
+\restrict waDOWG7u3OHzhLv8Ulxkc7dvUOz7Fuy1uGyY9Y9b9IZ1vcc45gf8DAEJdXhbfdh
 
 -- Dumped from database version 17.11
 -- Dumped by pg_dump version 17.11
@@ -293,7 +293,6 @@ ff0adb53-0b8d-46d8-95c2-2b90aa50d6ac	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	83	202
 3feb36bf-2ec5-46e1-b7e0-83e9c268c485	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	84	2026-10-05	3	Gostei, mas pode melhorar.	2026-10-05 18:27:01.42266-03
 94b7b9d5-0c58-4336-a45c-297082c25de9	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	96	2026-10-09	5	\N	2026-10-09 15:02:13.597613-03
 cbb39bc2-b42e-4024-89f7-8af1d98e25e9	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	97	2026-10-09	5	Adorei o cardápio de hoje!	2026-10-09 16:44:04.483145-03
-6393ecb3-29e9-4c63-bf0b-68e6747df6ac	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	98	2026-10-09	5	\N	2026-10-09 18:47:04.508664-03
 6fd73929-ef20-4d23-91a2-0d9872475e34	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	55	2026-09-21	2	Achei a refeição abaixo do esperado.	2026-09-21 13:07:57.611456-03
 9e1031ca-3e85-4fff-8490-14ec614af5a2	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	54	2026-09-21	3	A refeição estava razoável.	2026-09-21 14:40:55.515696-03
 c03625dd-36f1-47b9-b063-79e006bbd0d1	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	60	2026-09-23	4	Boa refeição e bem servida.	2026-09-23 17:40:48.08287-03
@@ -570,6 +569,7 @@ a1031a5f-946b-4c72-85d6-5379547196ff	c36f016a-fbc7-45cf-a547-ba989672d072	60	202
 392cb8c4-4613-41db-b59c-9dd7579eab5c	c36f016a-fbc7-45cf-a547-ba989672d072	78	2026-10-01	4	Estava muito saborosa.	2026-10-01 13:04:46.129102-03
 293e583c-1c53-4237-a6c7-b274275c4439	c36f016a-fbc7-45cf-a547-ba989672d072	79	2026-10-01	5	Excelente refeição!	2026-10-01 18:27:31.496531-03
 1b26868c-ea20-4b3f-80f9-24d00c22794b	c36f016a-fbc7-45cf-a547-ba989672d072	82	2026-10-02	5	Adorei o cardápio de hoje!	2026-10-02 16:36:23.579332-03
+6393ecb3-29e9-4c63-bf0b-68e6747df6ac	3ac65d3f-c52b-4adf-9dc5-3c3c9ca2eb4d	98	2026-10-09	3	\N	2026-10-09 18:47:04.508664-03
 \.
 
 
@@ -611,29 +611,21 @@ COPY public.refeicoes (id, periodo, descricao, data, nome, imagem_url) FROM stdi
 75	manha	Pão francês fresquinho prensado com presunto magro e queijo prato, servido com suco de laranja.	2026-09-30	Pão com presunto e queijo	\N
 76	almoco	Escondidinho de purê de batata gratinado com recheio de carne moída bem temperada, arroz e salada.	2026-09-30	Escondidinho de carne moída	\N
 77	tarde	Biscoitos de polvilho crocantes acompanhados de iogurte de morango.	2026-09-30	Biscoito caseiro com iogurte	\N
-87	manha	Pão de forma integral com patê suave de atum com ricota e chá de camomila gelado.	2026-10-06	Pão com pasta de atum	\N
-88	almoco	Almôndegas bovinas suculentas ao molho de tomate fresco, purê de batatas e arroz integral.	2026-10-06	Almôndegas ao sugo com purê	\N
-89	tarde	Pedaços refrescantes de melancia, mamão e banana com suco de acerola.	2026-10-06	Mix de frutas da estação	\N
-90	manha	Tigela de iogurte natural batido com um toque de mel, sementes de chia e morangos picados.	2026-10-07	Iogurte natural com mel e chia	\N
-91	almoco	Baião de dois tradicional com queijo coalho e feijão verde, servido com carne de sol acebolada e vinagrete.	2026-10-07	Baião de dois com carne de sol	\N
-92	tarde	Pão francês quentinho recheado com queijo minas frescal e suco de caju.	2026-10-07	Sanduíche de queijo branco	\N
-93	manha	Crepioca leve recheada com frango desfiado temperado com ervas finas e café com leite.	2026-10-08	Crepioca de frango	\N
 58	almoco	Arroz, feijão preto, carne moída refogada com cenoura e batata, acompanhada de farofa.	2026-09-22	Carne moída com legumes	https://drive.google.com/thumbnail?id=1o9mOHJr8-mYRV8JvU_W1XGb_UMvDtauy&sz=w2000
 61	almoco	Macarrão espaguete ao molho de tomate caseiro com carne bovina e queijo ralado.	2026-09-23	Macarronada à bolonhesa	https://drive.google.com/thumbnail?id=10ryYYiF45GeFuoRjsyAAqtah9d_wH0Mv&sz=w2000
 56	tarde	Bolo de cenoura caseiro acompanhado de suco de laranja natural.	2026-09-21	Bolo de cenoura e suco	\N
 59	tarde	Vitamina cremosa de banana com aveia e biscoito integral.	2026-09-22	Vitamina de banana e biscoito	https://lh3.googleusercontent.com/d/19JcebFjow8oJQn8ZJAS2FO9CDQk4hpQa=w2000
 62	tarde	Mix de frutas da estação (mamão, melancia e banana) com suco de maracujá.	2026-09-23	Salada de frutas	https://drive.google.com/thumbnail?id=1gHwai9tZqQ_SGMqurBCc3GDv1IGOL6Ws&sz=w2000
 63	manha	Tapioca tradicional com queijo e manteiga acompanhada de chá mate gelado.	2026-09-24	Tapioca recheada	\N
-94	almoco	Cubos de carne macia cozidos com vagem e cenoura, arroz branco, feijão carioca e farofa crocante.	2026-10-08	Picadinho bovino com legumes	\N
-95	tarde	Bolo artesanal de laranja com raspas e suco de abacaxi com hortelã.	2026-10-08	Bolo de laranja e suco	\N
 80	tarde	Frutas frescas picadas (abacaxi, melão e uva) salpicadas com granola e suco de goiaba.	2026-10-01	Salada de frutas com granola	https://static.itdg.com.br/images/640-400/ec507d19a44cbec578e81f99e6178616/344944-original.jpg
 81	manha	Pães de queijo mineiros assados na hora servidos com suco natural de maracujá.	2026-10-02	Pão de queijo e suco de maracujá	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIp59awxsblsNHBwtSEdGYBtOAJE9Z-H_H7wr_GLx38wxsvBHYQ3usKAI&s=10
 83	tarde	Vitamina cremosa de abacate batida com leite e torradas integrais crocantes.	2026-10-02	Vitamina de abacate e torrada	https://lh3.googleusercontent.com/d/1KS8KkoOMta5rwWN-LpYgModQoE6bh5h7=w2000
 84	manha	Cuscuz de milho tradicional com queijo derretido por cima e café com leite adoçado.	2026-10-05	Cuscuz com queijo e café	https://lh3.googleusercontent.com/d/1owWU-OPW0ov1TKV65iJ1gu13k7sUYj6W=w2000
 86	tarde	Bolo de cacau caseiro fofinho acompanhado de um copo de leite frio.	2026-10-05	Bolo de chocolate e leite	https://lh3.googleusercontent.com/d/1f60JGsPSYJ6gVkM95rduzKdPCfh0dzFG=w2000
-96	manha	Pão tostado na manteiga com ovos mexidos cremosos e achocolatado quente.	2026-10-09	Pão na chapa com ovos mexidos	\N
-97	almoco	Filé de tilápia grelhada servida com pirão de peixe saboroso, arroz branco e salada de alface e pepino.	2026-10-09	Filé de peixe grelhado com pirão	\N
-98	tarde	Fatia de torta integral de maçã com canela e vitamina refrescante de morango.	2026-10-09	Torta de maçã e vitamina	\N
+88	almoco	Almôndegas bovinas suculentas ao molho de tomate fresco, espaguete e arroz integral.	2026-10-06	Macarronada com Almôndegas	https://rotinacozinha.com/cdn/shop/files/macarraocomalmondega.jpg?v=1696472602
+93	manha	Crepioca leve recheada com frango desfiado temperado com ervas finas e café com leite.	2026-10-08	Crepioca de frango	https://www.sadia.com.br/assets/images/_/recipes/6eccc5f88058bf142bab64f34639e3d63af6e3e5.webp
+92	tarde	Pão francês quentinho recheado com queijo e mortadela acompanhado com suco de caju.	2026-10-07	Sanduíche de queijo e mortadela	https://static.itdg.com.br/images/1200-675/df5bbc7a14e7103aa0d8ca8125d61f8b/342902-original.jpg
+96	manha	Pão tostado na manteiga com ovos mexidos cremosos e achocolatado quente.	2026-10-09	Pão na chapa com ovos mexidos	https://panelaterapia.com/wp-content/uploads/2013/05/ovo_pao-620x408.jpg
 13	almoco	Uma pausa leve para começar bem o turno.	2026-09-18	Lanche da manhã	\N
 55	almoco	Arroz branco, feijão carioca, filé de frango grelhado e salada de alface com tomate.	2026-09-21	Frango grelhado com arroz e feijão	\N
 54	manha	Cuscuz quentinho com ovos mexidos e café com leite.	2026-09-21	Cuscuz com ovos	\N
@@ -643,6 +635,14 @@ COPY public.refeicoes (id, periodo, descricao, data, nome, imagem_url) FROM stdi
 79	almoco	Iscas de peito de frango aceboladas, feijão tropeiro leve, arroz branco e couve fatiada.	2026-10-01	Iscas de frango aceboladas	https://phygital-files.mercafacil.com/tartufo-bucket/uploads/produto/tiras_de_frango_aceboladas_300g_431d5608-8b62-4fcc-a936-53a745c2aa3f.png
 82	almoco	Lasanha com massa fresca, molho bolonhesa artesanal, queijo mussarela e salada verde.	2026-10-02	Lasanha à bolonhesa	https://guiadacozinha.com.br/wp-content/uploads/2014/01/lasanha-bolonhesa-na-pressao.jpg
 85	almoco	Sobrecoxa de frango assada com batata e cenoura, arroz soltinho, feijão preto e salada de repolho.	2026-10-05	Frango assado com legumes	https://guiadacozinha.com.br/wp-content/uploads/2019/10/frango-assado-cerveja-legumes.jpg
+87	manha	Pão de forma integral com patê suave de atum com ricota e chá de camomila gelado.	2026-10-06	Pão com pasta de atum	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3gS8QYXa794FmX1o6tmmn5ETVRwJ_O3InF72P1aGq2bI1ck_VH3bxzRdp&s=10
+89	tarde	Pedaços refrescantes de melancia, mamão e banana com suco de acerola.	2026-10-06	Mix de frutas da estação	https://selecoes.ig.com.br/media/_versions/legacy/d/f/622d9e91f399a92cb36e58a23db61577993e5580_widexl.jpg
+94	almoco	Cubos de carne macia cozidos com vagem e cenoura, arroz branco, feijão carioca e farofa crocante.	2026-10-08	Picadinho bovino com legumes	https://supermercadosrondon.com.br/guiadecarnes/images/postagens/receita_de_picadinho_de_carne_com_legumes_2020-04-23.jpeg
+98	tarde	Fatia de torta integral de maçã com canela e vitamina refrescante de morango.	2026-10-09	Torta de maçã e vitamina	https://cdn0.tudoreceitas.com/pt/posts/9/7/6/torta_de_maca_integral_2679_orig.jpg
+97	almoco	Filé de tilápia grelhada servida com pirão de peixe saboroso, arroz branco e salada de alface e pepino.	2026-10-09	Filé de peixe grelhado com pirão	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKpiHohQ_Jl4bgWHF2-WUMPS3TEPLBkikZWyVDtDpjkGbgn2JxkMS-OYkT&s=10
+95	tarde	A Torta Floresta Negra é uma sobremesa clássica de origem alemã que combina camadas de bolo de chocolate, recheio leve de chantilly e cerejas em calda.	2026-10-08	Torta Floresta Negra	https://blog.biglar.com.br/wp-content/uploads/2021/08/iStock-1214305490.jpg
+91	almoco	Um combinação de charque desfiada e com queijo coalho grelhado.	2026-10-07	Arrumadinho de Charque com queijo coalho	https://receitadaboa.com.br/wp-content/uploads/2026/06/ChatGPT-Image-25-de-jun.-de-2026-10_56_27-1-1200x660.jpg
+90	manha	Café quentinho, passado na hora, acompanhado de um pão francês crocante,  requeijão mineiro, na chapa com manteiga.	2026-10-07	Café com pão na chapa com requeijão	https://preview.redd.it/por-que-o-brasil-n%C3%A3o-tem-um-caf%C3%A9-da-manh%C3%A3-de-verdade-v0-hnhzb9kcacyd1.jpeg?auto=webp&s=679b9b10d279ec6593df9cc8507bc9830ebdf172
 \.
 
 
@@ -688,9 +688,9 @@ da593bba-f6eb-4d54-b83a-e05554d9dff0	Alessandro	15988680470	(00) 00000-0000	ales
 8799c70e-a004-4e8e-b655-55c5f95332a0	João Gabriel	15635901409	(33) 33333-3333	joao.gariel@gmail.com	$2b$10$lbNMH02mbgoq/9xqyqpjn.FVa1MX4hVnt8.wqCcQiu6UMLwt3q3O6	administrador	2026-08-24 12:35:09.213567-03
 71800530-dbb1-4f13-ad9a-350c4c866ab6	Kauã	66666666666	(66) 66666-6666	kaua@gmail.com	$2b$10$5lYaVxNArsbaHhJFwT4M8eQEQmT7OLNOh8ns2UuZKcpRSThPOyJQO	aluno	2026-08-24 13:02:04.465791-03
 335edd30-bd49-421b-9b2e-bec9512fa23f	José Arthur	99999999999	(99) 99999-9999	josearthur@gmail.com	$2b$10$3O9GEk/IcUaxdkX9U7Rc/umwWcP0bPvRfcweDWaTeklxoj9gstDB6	aluno	2026-08-24 13:03:50.726699-03
-a638b2d9-b73d-4d0e-aa30-77654884290c	Ellen Vitória	00000000000	(11) 11111-1111	ellen.vitoria@gmail.com	$2b$10$MWu65QMjjT3GKaWObDVGGerDSZHWYVyEWZKRk0rI3WUoyY6E.hiAm	administrador	2026-08-24 12:32:25.489665-03
 c36f016a-fbc7-45cf-a547-ba989672d072	George	44444444444	(44) 44444-4444	george@gmail.com	$2b$10$8sNKUyT1ucdIuV14NCRYFOdFCLUUH.lr.n1HtKiqqW3Bnn90W3IDm	aluno	2026-08-24 13:01:17.980467-03
 bedd76b2-e208-4e18-8a23-291bdfa635f5	Gustavo	55555555555	(55) 55555-5555	gustavo@gmail.com	$2b$10$5YmiP/LSKsqDuh8mgqN4RuH5ZIeK3Jr2NB9gu7tSQ1ckKSx5D.qxO	cozinha	2026-08-24 13:01:41.565897-03
+a638b2d9-b73d-4d0e-aa30-77654884290c	Ellen Vitória	16812912409	(11) 11111-1111	ellen.vitoria@gmail.com	$2b$10$v205/R.aitjvAjMzEnKe1uYclFQjGECqHnApbjfQKp2wLgoDmvs3G	administrador	2026-08-24 12:32:25.489665-03
 \.
 
 
@@ -851,5 +851,5 @@ ALTER TABLE ONLY public.solicitacoes_recuperacao_senha
 -- PostgreSQL database dump complete
 --
 
-\unrestrict WCRQh2tT6etUeuzcTS7oqVKEbzPrkaKohLIscsXEVHECl1WjVU5vZzBGpMZb05z
+\unrestrict waDOWG7u3OHzhLv8Ulxkc7dvUOz7Fuy1uGyY9Y9b9IZ1vcc45gf8DAEJdXhbfdh
 

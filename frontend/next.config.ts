@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       { pathname: "/integrantes/**" },
     ],
   },
-  allowedDevOrigins: ["192.168.0.179"],
+  allowedDevOrigins: ["10.206.119.240"],
   async rewrites() {
     return [
       {

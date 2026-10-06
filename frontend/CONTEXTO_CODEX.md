@@ -2,7 +2,7 @@
 
 ## Estado atual
 
-- A página inicial oferece um modal com QR Code para acesso móvel pela rede local em `http://192.168.0.179:3000`.
+- Os cabeçalhos das páginas públicas e do painel oferecem um modal com QR Code para acesso móvel pela rede local em `http://192.168.1.221:3000`.
 - A página de gestão de avaliações oferece filtros, relatórios, listagem, edição e exclusão com suporte aos temas claro e escuro.
 - As refeições aceitam imagem HTTPS opcional, exibida com fallback na página inicial, painel e gestão.
 - A recuperação de senha exige solicitação pública e ativação exclusiva por administrador.
@@ -10,6 +10,14 @@
 - Os retratos da equipe são arquivos independentes em `public/integrantes`, enumerados de `01.png` a `15.png`; cada perfil referencia o nome do arquivo diretamente.
 
 ## Histórico
+
+### 2026-10-05 — QR Code em todos os cabeçalhos
+
+- Pedido: permitir abrir o modal de QR Code a partir dos menus de todas as páginas.
+- Arquivos afetados: páginas públicas e do painel, `src/components/AcessoQrCode.tsx` e contexto compartilhado.
+- Decisão: reunir botão e modal em um componente reutilizável, preservando o endereço de acesso já configurado.
+- Validação: `npm run lint`, `npm run build` e `git diff --check` concluídos sem erros.
+- Pendências: nenhuma.
 
 ### 2026-10-03 — Cursor dos menus públicos
 
