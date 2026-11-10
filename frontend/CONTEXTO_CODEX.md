@@ -3,7 +3,7 @@
 ## Estado atual
 
 - Deploy preparado para Vercel (`savorsync`, Root Directory `frontend`) e API Express separada com PostgreSQL Neon; procedimentos em `../DEPLOY.md`.
-- O QR Code usa o endereço de origem da aplicação, incluindo o domínio público.
+- O QR Code aponta sempre para `https://savorsync-gamma.vercel.app`, inclusive ao abrir a aplicação localmente.
 
 - Os cabeçalhos das páginas públicas e do painel oferecem um modal com QR Code para acesso móvel pela rede local em `http://192.168.1.221:3000`.
 - A página de gestão de avaliações oferece filtros, relatórios, listagem, edição e exclusão com suporte aos temas claro e escuro.
@@ -336,3 +336,11 @@
 - Correção: limite de 72 caracteres, consistente com recuperação de senha e cadastro de usuários; senha e autenticação preservadas.
 - Validação: lint e build do frontend; conferência do JavaScript publicado e login via API. Inspeção interativa indisponível na automação.
 - Continuidade: correção publicada diretamente na Vercel; commit e push desta alteração continuam a cargo do usuário.
+
+### 2026-11-10 — QR Code com endereço público fixo
+
+- Pedido: atualizar o QR Code para https://savorsync-gamma.vercel.app.
+- Arquivos: src/components/AcessoQrCode.tsx e este contexto.
+- Decisão: usar o mesmo endereço público fixo no QR Code e no link do modal em todos os cabeçalhos, inclusive em acesso local.
+- Validação: lint e build do frontend; conferência do endereço no JavaScript publicado. Inspeção visual indisponível na automação.
+- Continuidade: alteração publicada diretamente na Vercel; commit e push ficam a cargo do usuário.

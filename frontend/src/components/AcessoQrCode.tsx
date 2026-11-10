@@ -4,18 +4,16 @@ import { useState } from "react";
 import { QrCode, X } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
+const enderecoAcessoCelular = "https://savorsync-gamma.vercel.app";
+
 export function AcessoQrCode({ compacto = false }: { compacto?: boolean }) {
   const [aberto, definirAberto] = useState(false);
-  const [enderecoAcessoCelular, definirEnderecoAcessoCelular] = useState("");
 
   return (
     <>
       <button
         type="button"
-        onClick={() => {
-          definirEnderecoAcessoCelular(window.location.origin);
-          definirAberto(true);
-        }}
+        onClick={() => definirAberto(true)}
         className={compacto
           ? "inline-flex items-center justify-center gap-2 border border-borda bg-superficie px-2 py-2 text-sm font-semibold text-texto-principal transition hover:cursor-pointer hover:bg-borda/30 sm:px-3"
           : "inline-flex items-center justify-center gap-2 border border-borda bg-superficie px-1 py-2 text-xs font-bold text-texto-principal transition hover:cursor-pointer hover:bg-borda/30 sm:px-3 sm:text-sm"}
