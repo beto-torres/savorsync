@@ -328,3 +328,11 @@
 - Resultado da publicação: https://savorsync-gamma.vercel.app e https://savorsync-api.vercel.app, ambos vinculados ao GitHub com Root Directory configurado. Saúde, cardápios atual/próximo, login e consulta administrativa retornaram HTTP 200.
 - A senha administrativa didática foi substituída no Neon por senha aleatória registrada apenas em backend/.env.production (ignorado pelo Git); banco local preservado.
 - Limitação de validação: nenhum navegador estava disponível na automação; fluxos de API verificados por HTTP, sem inspeção visual do QR Code.
+
+### 2026-11-10 — Correção do limite da senha no login
+
+- Causa: campo de login limitava a senha a 20 caracteres e truncava a senha administrativa de 24 caracteres ao colar; testes diretos da API não reproduziam o formulário.
+- Arquivos: src/app/page.tsx e este contexto.
+- Correção: limite de 72 caracteres, consistente com recuperação de senha e cadastro de usuários; senha e autenticação preservadas.
+- Validação: lint e build do frontend; conferência do JavaScript publicado e login via API. Inspeção interativa indisponível na automação.
+- Continuidade: correção publicada diretamente na Vercel; commit e push desta alteração continuam a cargo do usuário.

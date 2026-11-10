@@ -348,7 +348,7 @@ export default function PaginaInicial() {
             <input id="cpf" name="cpf" required inputMode="numeric" maxLength={14} onInput={aplicarMascaraCpf} placeholder="111.111.111-11" className="mt-2 w-full border border-borda bg-input-bg px-3 py-3 text-texto-principal outline-none placeholder:text-input-placeholder focus:border-primaria" />
             <label className="mt-4 block text-sm font-medium text-texto-principal" htmlFor="senha">Senha</label>
             <div className="relative mt-2">
-              <input id="senha" name="senha" maxLength={20} type={senhaVisivel ? "text" : "password"} required autoComplete="current-password" placeholder="Sua senha" className="w-full border border-borda bg-input-bg py-3 pl-3 pr-12 text-texto-principal outline-none placeholder:text-input-placeholder focus:border-primaria" />
+              <input id="senha" name="senha" maxLength={72} type={senhaVisivel ? "text" : "password"} required autoComplete="current-password" placeholder="Sua senha" className="w-full border border-borda bg-input-bg py-3 pl-3 pr-12 text-texto-principal outline-none placeholder:text-input-placeholder focus:border-primaria" />
               <button
                 type="button"
                 onClick={() => definirSenhaVisivel((visivel) => !visivel)}
