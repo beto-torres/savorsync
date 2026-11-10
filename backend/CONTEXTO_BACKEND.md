@@ -232,3 +232,12 @@ Antes de alterar o projeto, leia este arquivo. Ao criar, editar ou remover arqui
 - Resultado da publicação: https://savorsync-gamma.vercel.app e https://savorsync-api.vercel.app, ambos vinculados ao GitHub com Root Directory configurado. Saúde, cardápios atual/próximo, login e consulta administrativa retornaram HTTP 200.
 - A senha administrativa didática foi substituída no Neon por senha aleatória registrada apenas em backend/.env.production (ignorado pelo Git); banco local preservado.
 - Limitação de validação: nenhum navegador estava disponível na automação; fluxos de API verificados por HTTP, sem inspeção visual do QR Code.
+
+### 2026-11-10 — Restauração do backup no banco online
+
+- Pedido: importar `backend/backups/database_backup.sql` no banco online de produção.
+- Destino: banco `savorsync`, branch `production`, projeto Neon `lively-voice-99620873`.
+- Segurança: estado anterior preservado na branch sem compute `backup-before-import-20261110` (`br-fragrant-king-b67l2j29`). Restauração em transação única pela conexão direta, mantendo a senha administrativa de produção e adaptando apenas comandos de proprietário e metacomandos locais do dump.
+- Resultado: 14 usuários, 65 refeições, 364 avaliações, 10 migrações e 0 solicitações de recuperação de senha. Backup fonte preservado.
+- Validação: contagens conferidas antes do commit; saúde da API, login administrativo e consultas autenticadas de usuários, refeições e avaliações retornaram HTTP 200 com as contagens esperadas.
+- Documentação: DEPLOY.md atualizado; script temporário de restauração removido.

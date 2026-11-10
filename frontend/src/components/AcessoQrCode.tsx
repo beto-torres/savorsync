@@ -66,7 +66,6 @@ export function AcessoQrCode({ compacto = false }: { compacto?: boolean }) {
               rel="noreferrer"
               className="mt-5 block break-all text-sm font-semibold text-secundaria underline-offset-4 hover:underline"
             >
-              {enderecoAcessoCelular}
             </a>
           </section>
         </div>

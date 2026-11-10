@@ -18,7 +18,7 @@ O navegador acessa `/api` no próprio frontend, e o Next.js encaminha as requisi
 
 ## Migrações
 
-As migrações `001` a `010` foram aplicadas ao banco novo. O backup local não foi importado. Para migrações futuras, use a conexão direta do Neon em `DATABASE_URL` e execute na pasta `backend`:
+As migrações `001` a `010` estão aplicadas. Em 10/11/2026, `backend/backups/database_backup.sql` foi restaurado no banco de produção: 14 usuários, 65 refeições, 364 avaliações e nenhuma solicitação de recuperação pendente. A senha administrativa online foi preservada. O estado anterior está guardado na branch Neon `backup-before-import-20261110` (`br-fragrant-king-b67l2j29`), sem compute. Para migrações futuras, use a conexão direta do Neon em `DATABASE_URL` e execute na pasta `backend`:
 
 ```powershell
 npm ci
