@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 
 const enderecoApi = process.env.API_URL ?? "http://localhost:3333";
 
+if (process.env.VERCEL && !process.env.API_URL) {
+  throw new Error("Configure API_URL na Vercel com a URL HTTPS do backend.");
+}
+
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "standalone",

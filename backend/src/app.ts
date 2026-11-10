@@ -9,6 +9,8 @@ import { rotasUsuarios } from "./routes/usuarios.js";
 
 export const app = express();
 
+export default app;
+
 const origensPermitidas = config.CORS_ORIGIN.split(",").map((origem) => origem.trim());
 app.use(cors({ origin: origensPermitidas }));
 app.use(express.json({ limit: "32kb" }));

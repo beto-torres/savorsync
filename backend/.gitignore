@@ -2,4 +2,7 @@ node_modules
 .npm-cache
 dist
 .env
+.env.*
+!.env.example
+.vercel
 npm-debug.log*

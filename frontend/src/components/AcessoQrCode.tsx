@@ -4,16 +4,18 @@ import { useState } from "react";
 import { QrCode, X } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
-const enderecoAcessoCelular = "http://10.206.119.240:3000";
-
 export function AcessoQrCode({ compacto = false }: { compacto?: boolean }) {
   const [aberto, definirAberto] = useState(false);
+  const [enderecoAcessoCelular, definirEnderecoAcessoCelular] = useState("");
 
   return (
     <>
       <button
         type="button"
-        onClick={() => definirAberto(true)}
+        onClick={() => {
+          definirEnderecoAcessoCelular(window.location.origin);
+          definirAberto(true);
+        }}
         className={compacto
           ? "inline-flex items-center justify-center gap-2 border border-borda bg-superficie px-2 py-2 text-sm font-semibold text-texto-principal transition hover:cursor-pointer hover:bg-borda/30 sm:px-3"
           : "inline-flex items-center justify-center gap-2 border border-borda bg-superficie px-1 py-2 text-xs font-bold text-texto-principal transition hover:cursor-pointer hover:bg-borda/30 sm:px-3 sm:text-sm"}
@@ -48,7 +50,7 @@ export function AcessoQrCode({ compacto = false }: { compacto?: boolean }) {
 
             <p className="text-xs font-bold tracking-[0.16em] text-secundaria">ACESSO PELO CELULAR</p>
             <h2 id="qrcode-title" className="mt-2 text-2xl font-semibold text-texto-principal">Escaneie para abrir</h2>
-            <p className="mt-2 text-sm leading-6 text-texto-secundario">Conecte o celular à mesma rede do computador e aponte a câmera para o código.</p>
+            <p className="mt-2 text-sm leading-6 text-texto-secundario">Aponte a câmera do celular para o código para acessar o SavorSync.</p>
 
             <div className="mx-auto mt-6 w-fit bg-white p-2">
               <QRCodeSVG

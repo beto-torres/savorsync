@@ -221,3 +221,14 @@ Antes de alterar o projeto, leia este arquivo. Ao criar, editar ou remover arqui
 - Decisões: a solicitação pública armazena somente o hash da senha desejada e devolve resposta neutra; a senha vigente continua funcionando até a aprovação; somente administradores podem listar, ativar ou rejeitar solicitações.
 - Validações: solicitação `202`; senha nova rejeitada antes da aprovação e aceita depois; senha anterior invalidada na ativação; rejeição preserva a senha vigente; usuário temporário removido.
 - Pendências: nenhuma funcional.
+
+### 2026-11-10 — Publicação na Vercel e Neon
+
+- Pedido: configurar a aplicação para publicação usando o repositório beto-torres/savorsync.
+- Arquivos: configurações Vercel e ignore, pool PostgreSQL, exportação Express, dependências, QR Code, validação de API_URL e DEPLOY.md na raiz.
+- Decisões: projetos separados para frontend e API, região São Paulo, conexão pooled Neon com SSL e integração pg com Fluid compute; preservar Docker e autenticação existentes.
+- Validações: lint e build do frontend; typecheck e build do backend; npm audit do backend sem vulnerabilidades após atualização compatível; migrações 001–010 aplicadas ao banco novo. Verificações públicas registradas em DEPLOY.md.
+- Continuidade: mudanças locais precisam de commit e push para acompanhar deploys futuros pelo Git. Não foi importado o backup local.
+- Resultado da publicação: https://savorsync-gamma.vercel.app e https://savorsync-api.vercel.app, ambos vinculados ao GitHub com Root Directory configurado. Saúde, cardápios atual/próximo, login e consulta administrativa retornaram HTTP 200.
+- A senha administrativa didática foi substituída no Neon por senha aleatória registrada apenas em backend/.env.production (ignorado pelo Git); banco local preservado.
+- Limitação de validação: nenhum navegador estava disponível na automação; fluxos de API verificados por HTTP, sem inspeção visual do QR Code.

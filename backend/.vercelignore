@@ -1,0 +1,5 @@
+.npm-cache/
+backups/
+dist/
+.env*
+!.env.example

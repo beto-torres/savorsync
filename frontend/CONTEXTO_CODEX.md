@@ -2,6 +2,9 @@
 
 ## Estado atual
 
+- Deploy preparado para Vercel (`savorsync`, Root Directory `frontend`) e API Express separada com PostgreSQL Neon; procedimentos em `../DEPLOY.md`.
+- O QR Code usa o endereço de origem da aplicação, incluindo o domínio público.
+
 - Os cabeçalhos das páginas públicas e do painel oferecem um modal com QR Code para acesso móvel pela rede local em `http://192.168.1.221:3000`.
 - A página de gestão de avaliações oferece filtros, relatórios, listagem, edição e exclusão com suporte aos temas claro e escuro.
 - As refeições aceitam imagem HTTPS opcional, exibida com fallback na página inicial, painel e gestão.
@@ -314,3 +317,14 @@
 - Decisão: formato `dd/MM` e `HHhMM`, repetido por refeição e responsivo.
 - Validação: lint, TypeScript e revisão das classes responsivas.
 - Pendências: nenhuma.
+
+### 2026-11-10 — Publicação na Vercel e Neon
+
+- Pedido: configurar a aplicação para publicação usando o repositório beto-torres/savorsync.
+- Arquivos: configurações Vercel e ignore, pool PostgreSQL, exportação Express, dependências, QR Code, validação de API_URL e DEPLOY.md na raiz.
+- Decisões: projetos separados para frontend e API, região São Paulo, conexão pooled Neon com SSL e integração pg com Fluid compute; preservar Docker e autenticação existentes.
+- Validações: lint e build do frontend; typecheck e build do backend; npm audit do backend sem vulnerabilidades após atualização compatível; migrações 001–010 aplicadas ao banco novo. Verificações públicas registradas em DEPLOY.md.
+- Continuidade: mudanças locais precisam de commit e push para acompanhar deploys futuros pelo Git. Não foi importado o backup local.
+- Resultado da publicação: https://savorsync-gamma.vercel.app e https://savorsync-api.vercel.app, ambos vinculados ao GitHub com Root Directory configurado. Saúde, cardápios atual/próximo, login e consulta administrativa retornaram HTTP 200.
+- A senha administrativa didática foi substituída no Neon por senha aleatória registrada apenas em backend/.env.production (ignorado pelo Git); banco local preservado.
+- Limitação de validação: nenhum navegador estava disponível na automação; fluxos de API verificados por HTTP, sem inspeção visual do QR Code.
